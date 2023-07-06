@@ -20,8 +20,7 @@ function App(): JSX.Element {
   const Stack = createNativeStackNavigator();
 
   return (
-    <View >
-      <ScrollView>
+    <ScrollView >
       <NavigationContainer>
       <Stack.Navigator>
       <Stack.Screen
@@ -37,7 +36,6 @@ function App(): JSX.Element {
               </Stack.Navigator>
         </NavigationContainer>
       </ScrollView>
-    </View>
   );
 }
 

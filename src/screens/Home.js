@@ -8,26 +8,27 @@ const Home = ({navigation}) => {
   return (
     <View >
         <View style={styles.Header}>
-        {/* <LinearGradient
+        <LinearGradient
         style={styles.topGradient}
         colors={['rgba(255, 255, 255, 0.00)', '#1C85E8']}
-      ></LinearGradient> */}
-      <View style={{display:'flex',flexDirection:'row',width:'100%'}}>
+      ></LinearGradient>
+      <View style={{display:'flex',flexDirection:'row',width:'100%',position: 'absolute',
+top: 40,}}>
        <Text style={{color: '#FFF',
 textAlign: 'center',
 fontFamily: 'Open Sans',
 fontSize: 16,
 fontStyle: 'normal',
 fontWeight: 800,
+
 marginLeft: "44%",
-// lineHeight: 'normal',
 letterSpacing: -0.333,}}>Invoice</Text>
 <Image style={{marginLeft: "28%",}} source={require('../assets/profile.png')}/>
         </View>
-          {/* <LinearGradient
-        style={styles.topGradient}
-        colors={['rgba(255, 255, 255, 0.00)', '#1C85E8']}
-      ></LinearGradient> */}
+          <LinearGradient
+        style={styles.bottomGradient}
+        colors={['rgba(255, 255, 255, 0.00)', '#1C85E8','rgba(255, 255, 255, 0.00)']}
+      ></LinearGradient>
       </View>
       <View style={styles.statsContainer} elevation={25}>
 <View style={styles.LeftStats} elevation={5}>
@@ -102,6 +103,22 @@ borderBottomLeftRadius:35,
 backgroundColor: '#1C85E8',
 alignItems:'center',
   },
+  topGradient:{
+    width: 64.718,
+    height: 162.664,
+    transform: 'rotate(-73.308deg)',
+    borderRadius: 31,
+     marginLeft:-300,
+     marginTop:-60,
+  },
+ bottomGradient:{
+    width: 64.718,
+    height: 162.664,
+    transform: 'rotate(113.308deg)',
+    borderRadius: 31,
+     marginLeft:380,
+     marginTop:-60,
+  },
   statsContainer:{
     display:'flex',
     flexDirection:'row',
@@ -114,8 +131,6 @@ borderRadius: 15,
 backgroundColor: '#FFF',
 marginLeft:"7.5%",
 marginTop:-75,
-// zIndex:500,
-// position:'absolute'
   },
   LeftStats:{
     width: '50%',
